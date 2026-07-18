@@ -7,146 +7,364 @@
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
 <link rel="apple-touch-icon" href="data:image/png;base64,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">
 <style>
-  :root {
-    color-scheme: dark;
-  }
-  * { box-sizing: border-box; }
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   body {
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #0f1115;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: #f2f2f2;
-    padding: 24px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
   }
-  .card {
+  .app {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
+    gap: 16px;
+  }
+  .active-card {
+    background: #1a1d24;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
   }
-  .currency-label {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-  input[type="text"] {
+  .flag { font-size: 34px; line-height: 1; }
+  .active-info { flex: 1; }
+  .active-code { font-size: 15px; opacity: 0.7; margin-bottom: 4px; }
+  input#amountInput {
     width: 100%;
     font-size: 26px;
-    text-align: center;
-    padding: 14px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    background: #1a1d24;
+    background: transparent;
+    border: none;
     color: #f2f2f2;
+    padding: 0;
   }
-  input[type="text"]:focus {
-    outline: none;
-    border-color: #5b8cff;
-  }
-  .buttons-row {
+  input#amountInput:focus { outline: none; }
+
+  .refresh-row {
     display: flex;
-    gap: 12px;
-    width: 100%;
+    gap: 10px;
   }
   button {
-    flex: 1;
-    font-size: 16px;
-    padding: 14px 10px;
+    font-size: 15px;
+    padding: 12px 14px;
     border-radius: 12px;
     border: none;
     background: #2a2f3a;
     color: #f2f2f2;
     cursor: pointer;
   }
-  button:active {
-    background: #3a4152;
+  button.primary { background: #3a63e0; flex: 1; }
+  button:active { filter: brightness(1.15); }
+
+  .list { display: flex; flex-direction: column; gap: 10px; }
+
+  .row-wrap {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
   }
-  button.primary {
+  .row-delete-bg {
+    position: absolute;
+    inset: 0;
+    background: #c0392b;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .row {
+    position: relative;
+    background: #1a1d24;
+    padding: 14px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    touch-action: pan-y;
+    transition: transform 0.15s ease;
+  }
+  .row .flag { font-size: 24px; }
+  .row .code { font-weight: 600; font-size: 15px; width: 46px; }
+  .row .value { margin-left: auto; font-size: 18px; }
+
+  .status { font-size: 12px; opacity: 0.6; text-align: center; min-height: 16px; }
+  .hint { font-size: 12px; opacity: 0.5; text-align: center; }
+
+  .fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
     background: #3a63e0;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    z-index: 20;
+    padding: 0;
   }
-  button.primary:active {
-    background: #2c4dc0;
+  .fab.open { background: #2a2f3a; }
+
+  .add-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1a1d24;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.5);
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    z-index: 15;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
-  .results {
+  .add-panel.open { transform: translateY(0); }
+
+  .add-panel input {
     width: 100%;
+    font-size: 16px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    background: #101216;
+    color: #f2f2f2;
+  }
+  .add-panel input:focus { outline: none; border-color: #5b8cff; }
+
+  .country-results {
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
-  .result-row {
+  .country-item {
     display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    background: #1a1d24;
-    padding: 12px 16px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
     border-radius: 10px;
+    background: #101216;
   }
-  .status {
-    font-size: 12px;
-    opacity: 0.6;
-    text-align: center;
-    min-height: 16px;
+  .country-item .flag { font-size: 22px; }
+  .country-item .names { flex: 1; }
+  .country-item .country-name { font-size: 15px; }
+  .country-item .currency-name { font-size: 12px; opacity: 0.6; }
+  .country-item .country-code { font-size: 13px; font-weight: 600; opacity: 0.8; }
+  .country-item.added { opacity: 0.4; }
+
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    display: none;
   }
+  .backdrop.open { display: block; }
 </style>
 </head>
 <body>
 
-<div class="card">
-  <div class="currency-label" id="currencyLabel">EUR</div>
+<div class="app">
 
-  <input type="text" id="amountInput" inputmode="decimal" placeholder="Betrag eingeben" value="1">
-
-  <div class="buttons-row">
-    <button id="switchButton">Währung wechseln</button>
-    <button id="refreshButton" class="primary">Kurs aktualisieren</button>
+  <div class="active-card">
+    <div class="flag" id="activeFlag">🇪🇺</div>
+    <div class="active-info">
+      <div class="active-code" id="activeCode">EUR</div>
+      <input type="text" id="amountInput" inputmode="decimal" value="1">
+    </div>
   </div>
 
-  <div class="results" id="results"></div>
+  <div class="refresh-row">
+    <button class="primary" id="refreshButton">Kurs aktualisieren</button>
+  </div>
+
+  <div class="list" id="list"></div>
+
+  <div class="hint">Zeile antippen = aktive Währung wechseln · nach rechts wischen = löschen</div>
   <div class="status" id="status">Kurse werden geladen …</div>
+
+</div>
+
+<div class="backdrop" id="backdrop"></div>
+
+<button class="fab" id="fabButton">+</button>
+
+<div class="add-panel" id="addPanel">
+  <input type="text" id="countrySearch" placeholder="Land eingeben, z. B. Thailand" autocomplete="off">
+  <div class="country-results" id="countryResults"></div>
 </div>
 
 <script>
-  const currencyOrder = ["EUR", "KRW", "JPY"];
-  let currentIndex = 0;
+  // Flaggen-Zuordnung für gängige Währungscodes
+  const flagMap = {
+    EUR: "🇪🇺", USD: "🇺🇸", JPY: "🇯🇵", KRW: "🇰🇷", GBP: "🇬🇧",
+    CHF: "🇨🇭", CNY: "🇨🇳", AUD: "🇦🇺", CAD: "🇨🇦", NZD: "🇳🇿",
+    SEK: "🇸🇪", NOK: "🇳🇴", DKK: "🇩🇰", PLN: "🇵🇱", CZK: "🇨🇿",
+    HUF: "🇭🇺", THB: "🇹🇭", SGD: "🇸🇬", HKD: "🇭🇰", INR: "🇮🇳",
+    IDR: "🇮🇩", MYR: "🇲🇾", PHP: "🇵🇭", VND: "🇻🇳", MXN: "🇲🇽",
+    BRL: "🇧🇷", ZAR: "🇿🇦", TRY: "🇹🇷", AED: "🇦🇪", ILS: "🇮🇱",
+    RUB: "🇷🇺", TWD: "🇹🇼"
+  };
 
-  // rates[X] = wie viel X man für 1 EUR bekommt
-  let rates = { EUR: 1, KRW: 1550, JPY: 165 }; // Fallback-Werte, werden beim Laden ersetzt
+  // Länder -> Währung, für die Suche im "+"-Panel
+  const countries = [
+    { name: "Deutschland", code: "EUR", flag: "🇩🇪" },
+    { name: "Österreich", code: "EUR", flag: "🇦🇹" },
+    { name: "Schweiz", code: "CHF", flag: "🇨🇭" },
+    { name: "USA", code: "USD", flag: "🇺🇸" },
+    { name: "Vereinigte Staaten", code: "USD", flag: "🇺🇸" },
+    { name: "Japan", code: "JPY", flag: "🇯🇵" },
+    { name: "Südkorea", code: "KRW", flag: "🇰🇷" },
+    { name: "Großbritannien", code: "GBP", flag: "🇬🇧" },
+    { name: "Vereinigtes Königreich", code: "GBP", flag: "🇬🇧" },
+    { name: "Frankreich", code: "EUR", flag: "🇫🇷" },
+    { name: "Italien", code: "EUR", flag: "🇮🇹" },
+    { name: "Spanien", code: "EUR", flag: "🇪🇸" },
+    { name: "Niederlande", code: "EUR", flag: "🇳🇱" },
+    { name: "China", code: "CNY", flag: "🇨🇳" },
+    { name: "Australien", code: "AUD", flag: "🇦🇺" },
+    { name: "Kanada", code: "CAD", flag: "🇨🇦" },
+    { name: "Neuseeland", code: "NZD", flag: "🇳🇿" },
+    { name: "Schweden", code: "SEK", flag: "🇸🇪" },
+    { name: "Norwegen", code: "NOK", flag: "🇳🇴" },
+    { name: "Dänemark", code: "DKK", flag: "🇩🇰" },
+    { name: "Polen", code: "PLN", flag: "🇵🇱" },
+    { name: "Tschechien", code: "CZK", flag: "🇨🇿" },
+    { name: "Ungarn", code: "HUF", flag: "🇭🇺" },
+    { name: "Thailand", code: "THB", flag: "🇹🇭" },
+    { name: "Singapur", code: "SGD", flag: "🇸🇬" },
+    { name: "Hongkong", code: "HKD", flag: "🇭🇰" },
+    { name: "Indien", code: "INR", flag: "🇮🇳" },
+    { name: "Indonesien", code: "IDR", flag: "🇮🇩" },
+    { name: "Malaysia", code: "MYR", flag: "🇲🇾" },
+    { name: "Philippinen", code: "PHP", flag: "🇵🇭" },
+    { name: "Vietnam", code: "VND", flag: "🇻🇳" },
+    { name: "Mexiko", code: "MXN", flag: "🇲🇽" },
+    { name: "Brasilien", code: "BRL", flag: "🇧🇷" },
+    { name: "Südafrika", code: "ZAR", flag: "🇿🇦" },
+    { name: "Türkei", code: "TRY", flag: "🇹🇷" },
+    { name: "Vereinigte Arabische Emirate", code: "AED", flag: "🇦🇪" },
+    { name: "Israel", code: "ILS", flag: "🇮🇱" },
+    { name: "Russland", code: "RUB", flag: "🇷🇺" },
+    { name: "Taiwan", code: "TWD", flag: "🇹🇼" }
+  ];
 
-  const currencyLabel = document.getElementById("currencyLabel");
+  let currencies = ["EUR", "KRW", "JPY"];
+  let activeCurrency = "EUR";
+  let rates = { EUR: 1, KRW: 1550, JPY: 165 }; // Fallback bis Live-Daten geladen sind
+
+  const listEl = document.getElementById("list");
+  const activeFlag = document.getElementById("activeFlag");
+  const activeCode = document.getElementById("activeCode");
   const amountInput = document.getElementById("amountInput");
-  const results = document.getElementById("results");
   const statusEl = document.getElementById("status");
-  const switchButton = document.getElementById("switchButton");
   const refreshButton = document.getElementById("refreshButton");
+  const fabButton = document.getElementById("fabButton");
+  const addPanel = document.getElementById("addPanel");
+  const backdrop = document.getElementById("backdrop");
+  const countrySearch = document.getElementById("countrySearch");
+  const countryResults = document.getElementById("countryResults");
 
-  function updateLabel() {
-    currencyLabel.textContent = currencyOrder[currentIndex];
+  function flagFor(code) {
+    return flagMap[code] || "🏳️";
   }
 
-  function recalculate() {
-    const raw = amountInput.value.replace(",", ".");
-    const amount = parseFloat(raw);
-    results.innerHTML = "";
-    if (isNaN(amount)) return;
+  function setActive(code) {
+    activeCurrency = code;
+    activeFlag.textContent = flagFor(code);
+    activeCode.textContent = code;
+    render();
+  }
 
-    const currentCurrency = currencyOrder[currentIndex];
-    const amountInEur = amount / rates[currentCurrency];
+  function render() {
+    listEl.innerHTML = "";
+    const amount = parseFloat(amountInput.value.replace(",", ".")) || 0;
+    const amountInEur = amount / (rates[activeCurrency] || 1);
 
-    currencyOrder
-      .filter(c => c !== currentCurrency)
-      .forEach(target => {
-        const converted = amountInEur * rates[target];
+    currencies
+      .filter(c => c !== activeCurrency)
+      .forEach(code => {
+        const converted = amountInEur * (rates[code] || 0);
+
+        const wrap = document.createElement("div");
+        wrap.className = "row-wrap";
+
+        const bg = document.createElement("div");
+        bg.className = "row-delete-bg";
+        bg.textContent = "Löschen";
+        wrap.appendChild(bg);
+
         const row = document.createElement("div");
-        row.className = "result-row";
-        row.innerHTML = `<span>${target}</span><span>${converted.toLocaleString("de-DE", {maximumFractionDigits: 2})}</span>`;
-        results.appendChild(row);
+        row.className = "row";
+        row.innerHTML = `
+          <span class="flag">${flagFor(code)}</span>
+          <span class="code">${code}</span>
+          <span class="value">${converted.toLocaleString("de-DE", {maximumFractionDigits: 2})}</span>
+        `;
+        wrap.appendChild(row);
+        listEl.appendChild(wrap);
+
+        attachSwipeToDelete(row, wrap, code);
+
+        row.addEventListener("click", (e) => {
+          if (row.dataset.swiped === "true") return;
+          setActive(code);
+        });
       });
+  }
+
+  function attachSwipeToDelete(row, wrap, code) {
+    let startX = 0;
+    let currentX = 0;
+    let dragging = false;
+
+    row.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      dragging = true;
+      row.style.transition = "none";
+      row.dataset.swiped = "false";
+    }, { passive: true });
+
+    row.addEventListener("touchmove", (e) => {
+      if (!dragging) return;
+      currentX = e.touches[0].clientX - startX;
+      if (currentX < 0) currentX = 0;
+      row.style.transform = `translateX(${currentX}px)`;
+      if (currentX > 40) row.dataset.swiped = "true";
+    }, { passive: true });
+
+    row.addEventListener("touchend", () => {
+      dragging = false;
+      row.style.transition = "transform 0.2s ease";
+      const threshold = wrap.offsetWidth * 0.4;
+      if (currentX > threshold) {
+        row.style.transform = `translateX(${wrap.offsetWidth}px)`;
+        setTimeout(() => {
+          currencies = currencies.filter(c => c !== code);
+          render();
+        }, 180);
+      } else {
+        row.style.transform = "translateX(0)";
+        setTimeout(() => { row.dataset.swiped = "false"; }, 200);
+      }
+      currentX = 0;
+    });
   }
 
   async function fetchRates() {
@@ -154,31 +372,50 @@
     try {
       const res = await fetch("https://open.er-api.com/v6/latest/EUR");
       const data = await res.json();
-      if (data && data.rates && data.rates.KRW && data.rates.JPY) {
-        rates = { EUR: 1, KRW: data.rates.KRW, JPY: data.rates.JPY };
-        const time = new Date();
-        statusEl.textContent = "Aktualisiert: " + time.toLocaleTimeString("de-DE");
+      if (data && data.rates) {
+        rates = data.rates;
+        rates.EUR = 1;
+        statusEl.textContent = "Aktualisiert: " + new Date().toLocaleTimeString("de-DE");
       } else {
-        statusEl.textContent = "Kurse konnten nicht gelesen werden – alte Werte werden verwendet";
+        statusEl.textContent = "Kurse konnten nicht gelesen werden – alte Werte verwendet";
       }
     } catch (err) {
-      statusEl.textContent = "Kein Internet oder Fehler – alte Werte werden verwendet";
+      statusEl.textContent = "Kein Internet – alte Werte verwendet";
     }
-    recalculate();
+    render();
   }
 
-  switchButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % currencyOrder.length;
-    updateLabel();
-    recalculate();
-  });
+  function openPanel() {
+    addPanel.classList.add("open");
+    backdrop.classList.add("open");
+    fabButton.textContent = "×";
+    fabButton.classList.add("open");
+    countrySearch.value = "";
+    renderCountryResults("");
+    countrySearch.focus();
+  }
 
-  refreshButton.addEventListener("click", fetchRates);
-  amountInput.addEventListener("input", recalculate);
+  function closePanel() {
+    addPanel.classList.remove("open");
+    backdrop.classList.remove("open");
+    fabButton.textContent = "+";
+    fabButton.classList.remove("open");
+    countrySearch.blur();
+  }
 
-  updateLabel();
-  fetchRates();
-</script>
+  function renderCountryResults(query) {
+    const q = query.trim().toLowerCase();
+    const matches = q.length === 0
+      ? []
+      : countries.filter(c => c.name.toLowerCase().includes(q));
 
-</body>
-</html>
+    countryResults.innerHTML = "";
+    matches.slice(0, 8).forEach(c => {
+      const already = currencies.includes(c.code);
+      const item = document.createElement("div");
+      item.className = "country-item" + (already ? " added" : "");
+      item.innerHTML = `
+        <span class="flag">${c.flag}</span>
+        <span class="names">
+          <div class="country-name">${c.name}</div>
+          <div clas
