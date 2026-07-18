@@ -418,4 +418,37 @@
         <span class="flag">${c.flag}</span>
         <span class="names">
           <div class="country-name">${c.name}</div>
-          <div clas
+          <div class="currency-name">${c.code}</div>
+        </span>
+        <span class="country-code">${already ? "✓" : "+"}</span>
+      `;
+      if (!already) {
+        item.addEventListener("click", () => {
+          currencies.push(c.code);
+          render();
+          renderCountryResults(countrySearch.value);
+        });
+      }
+      countryResults.appendChild(item);
+    });
+  }
+
+  fabButton.addEventListener("click", () => {
+    if (addPanel.classList.contains("open")) {
+      closePanel();
+    } else {
+      openPanel();
+    }
+  });
+  backdrop.addEventListener("click", closePanel);
+  countrySearch.addEventListener("input", () => renderCountryResults(countrySearch.value));
+
+  refreshButton.addEventListener("click", fetchRates);
+  amountInput.addEventListener("input", render);
+
+  setActive("EUR");
+  fetchRates();
+</script>
+
+</body>
+</html>
